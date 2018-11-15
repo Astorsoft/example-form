@@ -1,76 +1,48 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <div class="container">
-	<div class="row">
-	<p><img src="//news.infosecgur.us/assets/kindred-logo.png" /></p>
-	<h2>My Secure Form</h2><br/>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<!-- Start form -->
-                    <form>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="username" placeholder="Enter username">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                      </div>
-                      <div class="form-check">
-                        <button class="btn btn-info" type="button" name="showpassword" id="showpassword" value="Show Password">Show password</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </div>
-
-                    </form>
-
-
-			<!-- End form -->
-		</div>
-
-
-
-	</div>
+  <div class="row">
+  <img src="http://news.infosecgur.us/assets/kindred-logo.png" style="height: 100%; width: 100%; object-fit: contain"/>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h2>Secure Form</h2><br />
+        <form action="index.html" method="post">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Enter username">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+          </div>
+          <div class="form-check">
+            <button class="btn btn-info" type="button" name="showpassword" id="showpassword" value="Show Password">Show password</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+    </div>
+  </div>
 </div>
-
-
 
 <script>
   jQuery(document).ready(function(){
-
-
-  	// Show password Button
-  	$("#showpassword").on('click', function(){
-
-  		var pass = $("#password");
-  		var fieldtype = pass.attr('type');
-  		if (fieldtype == 'password') {
-  			pass.attr('type', 'text');
-  			$(this).text("Hide Password");
-  		}else{
-  			pass.attr('type', 'password');
-  			$(this).text("Show Password");
-  		}
-
-
-  	});
-
-
-
-
-
-  });
+    // Show password Button
+    $("#showpassword").on('click', function(){
+      var pass = $("#password");
+      var fieldtype = pass.attr('type');
+      if (fieldtype == 'password') {
+        pass.attr('type', 'text');
+        $(this).text("Hide Password");
+      } else {
+        pass.attr('type', 'password');
+        $(this).text("Show Password");
+      }});});
 </script>
-
 </body>
-
 </html>
